@@ -9,9 +9,13 @@ import { RouterLink, RouterView } from 'vue-router'
 <style>
 /* 全局 Apple 风格样式 */
 :root {
-  /* Apple 颜色变量 */
-  --apple-blue: #0071e3;
-  --apple-blue-hover: #0077ed;
+  /* Apple 高级颜色变量 */
+  --apple-primary: #5E5CE6;      /* 高级紫色，替代默认的蓝色 */
+  --apple-primary-hover: #4E4CD0;
+  --apple-secondary: #BF5AF2;    /* 紫罗兰色，用于强调 */
+  --apple-accent: #FF9F0A;       /* 金色/香槟色，用于特殊强调 */
+  --apple-graphite: #8E8E93;     /* 太空灰，用于次要元素 */
+  --apple-midnight: #1C1C1E;     /* 午夜色，用于深色元素 */
   --apple-text-primary: #1d1d1f;
   --apple-text-secondary: #86868b;
   --apple-background: #ffffff;
@@ -47,13 +51,13 @@ html, body {
 
 /* 链接样式 */
 a {
-  color: var(--apple-blue);
+  color: var(--apple-primary);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--apple-blue-hover);
+  color: var(--apple-primary-hover);
 }
 
 /* 平滑过渡 */

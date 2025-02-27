@@ -20,8 +20,8 @@
 <style scoped>
 .footer {
   background-color: rgba(249, 249, 249, 0.8); /* 苹果风格的浅灰色带透明度 */
-  color: #1d1d1f; /* 苹果风格的暗灰色文字 */
-  border-top: 1px solid rgba(0, 0, 0, 0.08); /* 顶部细边框替代阴影 */
+  color: var(--apple-text-primary);
+  border-top: 1px solid var(--apple-border);
   text-align: center;
   backdrop-filter: blur(10px); /* 磨砂玻璃效果 */
   -webkit-backdrop-filter: blur(10px); /* Safari 支持 */
@@ -47,7 +47,7 @@
 .copyright {
   margin: 0;
   font-size: 12px; /* 苹果风格的小字体 */
-  color: #86868b; /* 苹果次要文本颜色 */
+  color: var(--apple-text-secondary);
   letter-spacing: -0.01em; /* 微调字母间距 */
   font-weight: 400;
 }
@@ -60,7 +60,7 @@
 }
   
 .footer-link {
-  color: #515154; /* 苹果链接颜色 */
+  color: var(--apple-graphite); /* 使用太空灰颜色 */
   text-decoration: none;
   font-size: 12px;
   letter-spacing: -0.01em;
@@ -69,7 +69,7 @@
 }
   
 .footer-link:hover {
-  color: #0066cc; /* 苹果蓝色链接悬停颜色 */
+  color: var(--apple-primary); /* 使用主题色 */
   text-decoration: none; /* 移除默认的下划线 */
 }
 
@@ -81,7 +81,7 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: #0066cc;
+  background-color: var(--apple-primary);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }

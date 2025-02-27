@@ -83,22 +83,22 @@ const handleSelect = (key, keyPath) => {
 }
 
 :deep(.el-menu-item.is-active) {
-    background-color: rgba(0, 112, 245, 0.1);
-    color: #0070f5;
+    background-color: rgba(94, 92, 230, 0.1);
+    color: var(--apple-primary);
     font-weight: 500;
 }
 
 :deep(.el-menu-item:hover) {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(191, 90, 242, 0.05);
 }
 
 :deep(.el-menu-item .el-icon) {
     margin-right: 8px;
-    color: #86868b;
+    color: var(--apple-graphite);
 }
 
 :deep(.el-menu-item.is-active .el-icon) {
-    color: #0070f5;
+    color: var(--apple-primary);
 }
 
 /* 响应式调整 */
