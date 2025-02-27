@@ -1,6 +1,7 @@
 # QuickStart-fe
 
 This template should help get you started developing with Vue 3 in Vite.
+一个前端快速开始的脚手架，可以用来写一般的平台系统。
 
 ## Recommended IDE Setup
 
