@@ -33,6 +33,7 @@ import Content from '@/components/Content.vue';
 <style scoped>
 .common-layout {
   height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
 }
 
 .el-container {
@@ -40,28 +41,54 @@ import Content from '@/components/Content.vue';
 }
 
 .el-header {
-  background-color: #b3c0d1;
-  color: #333;
-  text-align: center;
+  padding: 0;
+  height: auto !important;
+  box-shadow: none;
+  z-index: 100;
 }
 
 .el-aside {
-  background-color: #d3dce6;
+  width: 220px !important;
+  background-color: transparent;
   color: #333;
-  line-height: 200px;
   text-align: center;
+  transition: width 0.3s;
+  overflow: hidden;
+  border-right: none;
 }
 
 .el-main {
-  background-color: #e9eef3;
-  color: #333;
-  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #1d1d1f;
+  padding: 24px;
+  transition: background-color 0.3s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 0;
 }
 
 .el-footer {
-  background-color: #b3c0d1;
-  color: #333;
-  line-height: 30px;
-  text-align: center;
+  padding: 0;
+  height: auto !important;
+  background-color: transparent;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .el-aside {
+    width: 180px !important;
+  }
+  
+  .el-main {
+    padding: 16px;
+  }
+}
+
+/* 暗色模式支持 (可选) */
+@media (prefers-color-scheme: dark) {
+  .el-main {
+    background-color: rgba(28, 28, 30, 0.95);
+    color: #f5f5f7;
+  }
 }
 </style>

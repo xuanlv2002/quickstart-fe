@@ -1,59 +1,103 @@
 <template>
-    <div class="footer">
-      <div class="footer-content">
-        <!-- 居中内容 -->
-        <div class="footer-center">
-          <p class="copyright">&copy; 2023 Your Company. All rights reserved.</p>
-          <div class="footer-links">
-            <a href="#" class="footer-link">Privacy Policy</a>
-            <a href="#" class="footer-link">Terms of Service</a>
-            <a href="#" class="footer-link">Contact Us</a>
-          </div>
+  <div class="footer">
+    <div class="footer-content">
+      <div class="footer-center">
+        <p class="copyright">&copy; 2023 Your Company. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+          <a href="#" class="footer-link">Contact Us</a>
         </div>
       </div>
     </div>
-  </template>
+  </div>
+</template>
   
-  <script setup>
-  // 你可以在这里定义逻辑
-  </script>
+<script setup>
+// 你可以在这里定义逻辑
+</script>
   
-  <style scoped>
-  .footer {
-    background-color: #b3c0d1; /* 背景颜色 */
-    color: #333; /* 文字颜色 */
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* 顶部阴影 */
-    text-align: center; /* 文字居中 */
-  }
+<style scoped>
+.footer {
+  background-color: rgba(249, 249, 249, 0.8); /* 苹果风格的浅灰色带透明度 */
+  color: #1d1d1f; /* 苹果风格的暗灰色文字 */
+  border-top: 1px solid rgba(0, 0, 0, 0.08); /* 顶部细边框替代阴影 */
+  text-align: center;
+  backdrop-filter: blur(10px); /* 磨砂玻璃效果 */
+  -webkit-backdrop-filter: blur(10px); /* Safari 支持 */
+  padding: 20px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  position: relative;
+  z-index: 10;
+}
   
-  .footer-content {
-    max-width: 1200px; /* 最大宽度 */
-    margin: 0 auto; /* 水平居中 */
-  }
+.footer-content {
+  max-width: 980px; /* 苹果网站常用的内容宽度 */
+  margin: 0 auto;
+  padding: 0 22px; /* 适应小屏幕的内边距 */
+}
   
-  .footer-center {
-    display: flex;
-    flex-direction: column; /* 垂直排列 */
-    align-items: center; /* 水平居中 */
-  }
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* 垂直元素间距 */
+}
   
-  .copyright {
-    margin: 0; /* 移除默认段落边距 */
-    font-size: 14px; /* 字体大小 */
-  }
+.copyright {
+  margin: 0;
+  font-size: 12px; /* 苹果风格的小字体 */
+  color: #86868b; /* 苹果次要文本颜色 */
+  letter-spacing: -0.01em; /* 微调字母间距 */
+  font-weight: 400;
+}
   
+.footer-links {
+  display: flex;
+  gap: 24px; /* 苹果风格的链接间距 */
+  flex-wrap: wrap; /* 在小屏幕上自动换行 */
+  justify-content: center;
+}
+  
+.footer-link {
+  color: #515154; /* 苹果链接颜色 */
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: -0.01em;
+  position: relative;
+  transition: color 0.2s ease;
+}
+  
+.footer-link:hover {
+  color: #0066cc; /* 苹果蓝色链接悬停颜色 */
+  text-decoration: none; /* 移除默认的下划线 */
+}
+
+/* 添加苹果风格的链接悬停效果 */
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #0066cc;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.footer-link:hover::after {
+  transform: scaleX(1);
+}
+  
+/* 媒体查询：更小屏幕上的适配 */
+@media (max-width: 768px) {
   .footer-links {
-    display: flex;
-    gap: 20px; /* 链接之间的间距 */
+    gap: 16px;
   }
   
-  .footer-link {
-    color: #333; /* 链接颜色 */
-    text-decoration: none; /* 移除下划线 */
-    font-size: 14px; /* 字体大小 */
+  .footer {
+    padding: 16px 0;
   }
-  
-  .footer-link:hover {
-    text-decoration: underline; /* 鼠标悬停时显示下划线 */
-  }
+}
   </style>
